@@ -9,10 +9,11 @@
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 	<link rel="stylesheet" href="{% static 'main/css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'banks/css/bank_info.css' %}">
 	<script src="https://kit.fontawesome.com/7a95604c3a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="main-menu">
+    <nav class="main-menu">
     <div class="settings"></div>
     <div class="scrollbar" id="style-1">
       <ul>
@@ -38,8 +39,10 @@
     </div>
   </nav>
 <main>
-	{% block content %}
+	<div>
+        {% block content %}
     {% endblock %}
+    </div>
 </main>
 
 </body>
