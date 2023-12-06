@@ -1,5 +1,5 @@
 from .models import Bank
-from django.forms import ModelForm, TextInput, DateTimeInput, Textarea
+from django.forms import ModelForm, TextInput, DateInput, Textarea
 from datetime import datetime, date, timedelta
 
 
@@ -42,19 +42,18 @@ class BankForm(ModelForm):
                 'id': 'owner_secondname',
                 'value': ''
             }),
-            "bank_founder_birthday": DateTimeInput(attrs={
+            "bank_founder_birthday": DateInput(attrs={
                 'class': 'form-input block w-full focus:bg-white',
                 'id': 'owner_birthday',
                 'type': 'date',
                 'value': '',
                 'max': (date.today() - timedelta(days=365 * 18)).isoformat()
             }),
-            "bank_found_date": DateTimeInput(attrs={
+            "bank_found_date": DateInput(attrs={
                 'class': 'form-input block w-full focus:bg-white',
                 'id': 'bank_birthday',
                 'value': '',
                 'type': 'date',
                 'max': today_date
             }),
-
         }
