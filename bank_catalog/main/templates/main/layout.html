@@ -18,15 +18,21 @@
     <div class="scrollbar" id="style-1">
       <ul>
         <li>
-          <a href="{% url 'banks' %}">
+          <a href="{% url 'main_page' %}">
             <i class="fa fa-home fa-lg"></i>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+          <li>
+          <a href="{% url 'banks' %}">
+            <i class="fa fa-building-columns fa-lg"></i>
             <span class="nav-text">Banks</span>
           </a>
         </li>
         <li>
-          <a href="{% url 'profile' %}">
+          <a href="{% url 'create_bank' %}">
             <i class="fa fa-user fa-lg"></i>
-            <span class="nav-text">Profile</span>
+            <span class="nav-text">Add Bank</span>
           </a>
         </li>
         <li class="darkerlishadow">
