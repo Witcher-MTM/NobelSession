@@ -9,7 +9,6 @@
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 	<link rel="stylesheet" href="{% static 'main/css/sidebar.css' %}">
-    <link rel="stylesheet" href="{% static 'banks/css/bank_info.css' %}">
 	<script src="https://kit.fontawesome.com/7a95604c3a.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -36,9 +35,9 @@
           </a>
         </li>
         <li class="darkerlishadow">
-          <a href="{% url 'logout' %}">
+          <a href="{% url 'auth' %}">
            <i class="fa fa-solid fa-arrow-right-from-bracket fa-lg"></i>
-            <span class="nav-text">Log out</span>
+            <span class="nav-text">Log in</span>
           </a>
         </li>
       </ul>
