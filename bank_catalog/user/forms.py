@@ -1,38 +1,14 @@
-from .models import User
-from django.forms import ModelForm, TextInput, DateInput, Textarea
-from datetime import datetime, date, timedelta
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from django import forms
 
-
-class BankForm(ModelForm):
+class UserForm(UserCreationForm):
     class Meta:
-        today_date = datetime.now().strftime('%Y-%m-%d')
         model = User
-        fields = ["user_name",
-                  "user_surname",
-                  "user_age",
-                  "user_email",
-                  "user_hashpass",
-                  "bank_id"]
+        fields = ["username", "email", "password1", "password2"]
         widgets = {
-            "user_name": TextInput(attrs={
-                'id': 'user_name',
-            }),
-            "user_surname": TextInput(attrs={
-                'id': 'user_surname',
-            }),
-            "user_age": DateInput(attrs={
-                'id': 'user_age',
-                'max': (date.today() - timedelta(days=365 * 18)).isoformat()
-            }),
-            "user_email": TextInput(attrs={
-                'id': 'user_email',
-                'type':'email'
-            }),
-            "user_hashpass": TextInput(attrs={
-                'id': 'user_hashpass',
-                'type': 'password'
-            }),
-            "bank_id": TextInput(attrs={
-                'id': 'bank_id',
-            })
+            'username': forms.TextInput(attrs={'placeholder': 'Enter your username'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'Enter your email'}),
+            'password1': forms.PasswordInput(attrs={'placeholder': 'Enter your password'}),
+            'password2': forms.PasswordInput(attrs={'placeholder': 'Confirm your password'}),
         }
