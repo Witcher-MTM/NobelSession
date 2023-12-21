@@ -9,6 +9,6 @@ class UserForm(UserCreationForm):
         widgets = {
             'username': forms.TextInput(attrs={'placeholder': 'Enter your username'}),
             'email': forms.EmailInput(attrs={'placeholder': 'Enter your email'}),
-            'password1': forms.PasswordInput(attrs={'placeholder': 'Enter your password'}),
-            'password2': forms.PasswordInput(attrs={'placeholder': 'Confirm your password'}),
+            'password1': forms.PasswordInput(attrs={'placeholder': 'Enter your password', 'id':'id_password1'}),
+            'password2': forms.PasswordInput(attrs={'placeholder': 'Confirm your password', 'id':'id_password2'}),
         }

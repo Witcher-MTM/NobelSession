@@ -20,7 +20,7 @@
      <li>
       <a href="" class="card">
         {% if bank.bank_avatar %}
-                <img src="{{ bank.bank_avatar }}" class="card__image" alt="" />
+                <img src="../images/test.png" class="card__image" alt="" />
               {% else %}
                 <img src="{% static 'banks/img/nonePhoto.jpg' %}" class="card__image" alt="Default Image" />
           {% endif %}
@@ -32,7 +32,7 @@
               <span class="card__status">Founder:{{bank.bank_founder_name}} {{bank.bank_founder_surname}}</span>
             </div>
           </div>
-          <p class="card__description">Bank city: {{bank.bank_founder_city}} <br>Bank birthday: <br>{{bank.bank_found_date}}</p>
+          <p class="card__description">Bank city: {{bank.bank_city}} <br>Bank birthday: <br>{{bank.bank_found_date}}</p>
         </div>
       </a>
       </li>
